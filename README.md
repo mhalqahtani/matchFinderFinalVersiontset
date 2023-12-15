@@ -13,9 +13,9 @@ Abdullah Alharthi 2035071
 
 Through the Java command line, Our project uses the API-FOOTBALL from the Rapid website to fetch live football match data for major leagues. Using the Observer design pattern, updates are sent to users via SMS via the Twilio API. The Abstract Factory pattern is used for creating observers, enhancing modularity and extensibility.
 
-Creational design patterns are a category of design patterns that deal with object creation mechanisms. They provide ways to instantiate objects in a manner suitable to the situation. The primary goal of creational design patterns is to provide more flexibility in the creation of objects while promoting code reuse and system scalability.
 
-## Abstract Factory Pattern is one of the creational design patterns and provides an interface for creating families of related or dependent objects without specifying their concrete classes. So we implemented the Abstract Factory pattern on our project to make the creation of objects more flexible while promoting code reuse and system scalability.
+
+ Abstract Factory Pattern is one of the creational design patterns and provides an interface for creating families of related or dependent objects without specifying their concrete classes. So we implemented the Abstract Factory pattern on our project to make the creation of objects more flexible while promoting code reuse and system scalability.
 Abstract Subject Interface
 
 The Subject interface defines the contract for subjects. and it declared the following methods:
@@ -27,14 +27,13 @@ This method permits observers to be added to the subscriber list. This method wi
 removeSubscriber(Observer observer): This method allows observers to be deleted from the subscriber list. By using this method, concrete subjects will be able to unregister observers and stop them from getting notifications in the future.
 
 notifySubscribers(String message): This method is in charge of informing all subscribers of any changes to the subject's state. Whenever a state change occurs, concrete subjects will call this method, which will cause each subscribed observer to call their update method.
-## The MessageSubject class implements the Subject interface.
 
-It manages an observer list and gives the three methods provided in the Subject interface specific implementations.
 ## Observer
 We used the Observer design pattern to enable real-time updates and isolate the components responsible for acquiring match data and sending SMS notifications. this design pattern increases our system's adaptability, which makes it simple to add or remove observers without compromising its essential functions.
 
 
-## the main
+## The main
+here we create the observer and Also call the related methods to fetch info and send it via SMS to the user.
 
 ![image](https://github.com/mhalqahtani/matchFinderFinalVersiontset/assets/144021434/e4c4d35d-8edf-4b2a-928b-252f21242295)
 
